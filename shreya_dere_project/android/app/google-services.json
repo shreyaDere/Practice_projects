@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "229751465101",
+    "project_id": "shreya-dere-project",
+    "storage_bucket": "shreya-dere-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229751465101:android:b26ad3d3eff1b937062ec4",
+        "android_client_info": {
+          "package_name": "com.example.shreya_dere_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229751465101-f5dq39jqabvopisqnfippifdq6h5fppd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shreya_dere_project",
+            "certificate_hash": "89f89d6e6d0f01cf41e34de19fe91c55456aa2bd"
+          }
+        },
+        {
+          "client_id": "229751465101-o418jus6hgun3up9rmcbnva6fdfv1bhc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQF2ibINjRhXKwO49nfKZS5IOgoB0x1oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229751465101-o418jus6hgun3up9rmcbnva6fdfv1bhc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
