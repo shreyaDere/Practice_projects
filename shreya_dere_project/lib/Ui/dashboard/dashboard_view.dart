@@ -1,4 +1,6 @@
+import 'package:adaptive_dialog/adaptive_dialog.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shreya_dere_project/Ui/dashboard/dashboard_view_model.dart';
 import 'package:shreya_dere_project/constants/color/color.dart';
@@ -44,9 +46,88 @@ class DashBoardView extends StatelessWidget {
                             ),
                           ),
                         )
-                      : DashBoardWidgetList()
+                      : DashBoardWidgetList(),
+                  model.showAlert ? ShowAlert(name) : Container()
                 ],
               ))),
+    );
+  }
+}
+
+/*
+CupertinoAlertDialog(
+                          title: new Text("Alert"),
+                          content: new Text("Sign in as ${model.userName}"),
+                          actions: <Widget>[
+                            CupertinoDialogAction(
+                                onPressed: () => model.dismissAlert(),
+                                child: Text("Ok")),
+                          ],
+                        )
+*/
+class ShowAlert extends ViewModelWidget<DashBoardViewModel> {
+  String name;
+  ShowAlert(this.name);
+  @override
+  Widget build(BuildContext context, DashBoardViewModel viewModel) {
+    return Center(
+      child: Container(
+        width: MediaQuery.of(context).size.width / 1.6,
+        height: 100,
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(20)),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              "Alert",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Text(
+              "Sign in as $name",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 14),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Divider(
+              color: Colors.grey,
+              height: 0.2,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            GestureDetector(
+              onTap: () => viewModel.dismissAlert(),
+              child: Container(
+                width: MediaQuery.of(context).size.width / 1.6,
+                child: Text(
+                  "ok",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.normal,
+                      fontSize: 16),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
