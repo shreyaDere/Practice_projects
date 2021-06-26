@@ -194,9 +194,9 @@ class DashBoardWidgetList extends ViewModelWidget<DashBoardViewModel> {
                                 height: MediaQuery.of(context).size.height / 4,
                                 child: CachedNetworkImage(
                                     errorWidget: (context, url, error) =>
-                                        Container(child: Icon(Icons.error)),
+                                        Container(child: Icon(Icons.error,color: Colors.white,)),
                                     placeholder: (context, url) => Container(
-                                          child: Icon(Icons.error),
+                                          child: Icon(Icons.error,color: Colors.white),
                                         ),
                                     fadeInCurve: Curves.fastOutSlowIn,
                                     fit: BoxFit.fill,
