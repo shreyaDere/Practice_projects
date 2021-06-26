@@ -194,9 +194,14 @@ class DashBoardWidgetList extends ViewModelWidget<DashBoardViewModel> {
                                 height: MediaQuery.of(context).size.height / 4,
                                 child: CachedNetworkImage(
                                     errorWidget: (context, url, error) =>
-                                        Container(child: Icon(Icons.error,color: Colors.white,)),
+                                        Container(
+                                            child: Icon(
+                                          Icons.error,
+                                          color: Colors.white,
+                                        )),
                                     placeholder: (context, url) => Container(
-                                          child: Icon(Icons.error,color: Colors.white),
+                                          child: Icon(Icons.error,
+                                              color: Colors.white),
                                         ),
                                     fadeInCurve: Curves.fastOutSlowIn,
                                     fit: BoxFit.fill,
@@ -211,9 +216,7 @@ class DashBoardWidgetList extends ViewModelWidget<DashBoardViewModel> {
                                   onTap: () =>
                                       viewModel.jumpTopToNextItem(index, i),
                                   child: Padding(
-                                    padding: i == 0
-                                        ? const EdgeInsets.only(left: 20.0)
-                                        : const EdgeInsets.only(left: 0.0),
+                                    padding: const EdgeInsets.only(left: 10.0),
                                     child: Text(
                                         viewModel.pathListResponse[index]
                                             .subPaths[i].title

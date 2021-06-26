@@ -33,7 +33,6 @@ class DashBoardViewModel extends BaseViewModel {
   }
 
   jumpTopToNextItem(index, i) {
-    currentIndex = index;
     horizontalListCtl.animateTo(i * 400.0,
         duration: Duration(microseconds: 1000), curve: Curves.bounceInOut);
   }
